@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800;900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap');
+
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 4rem 2rem;
+  color: white;
+  min-height: 90vh;
+  overflow: hidden;
+   padding-top: 100px; 
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ background: linear-gradient(
+    to bottom,
+    #1a1a1a09 0%,
+    #0f0f0f8a 50%,
+    #000000 100%
+  );
+
+  z-index: 1;
+}
+
+
+/* Fullscreen Video Background */
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.hero-video-bg iframe {
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* prevents clicking the iframe */
+}
+
+
+
+.hero-left {
+  margin-top: 55px;
+  margin-right: 30rem;
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.hero-left h2 {
+  font-size: 5.8rem;
+  margin-bottom: 0.01rem;
+  font-weight: 800;
+  text-align: left;
+  letter-spacing: -0.20px;
+  font-family: 'Outfit', sans-serif !important;
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Soft dark shadow for contrast */
+}
+
+
+.hero-left p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: -3px;
+  margin-bottom: 2rem;
+  color: #e5e7eb;
+  text-align: left;
+  letter-spacing: -0.12px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Soft dark shadow for contrast */
+  
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 35%;
+  
+}
+
+.secondary-btn {
+  flex: 1;
+  text-align: center;
+  padding: 14px;
+  font-size: 12px;
+  font-weight: 800;
+  font-style: italic;
+  margin-top: -10px;
+}
+
+
+.secondary-btn {
+  background: transparent;
+  color:  #D4D10D;
+  border: 2px solid   #D4D10D;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: #D4D10D;
+ 
+  color: #1e293b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}

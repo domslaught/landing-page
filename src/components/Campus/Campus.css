@@ -1,0 +1,101 @@
+.campus-section {
+  display: flex;
+  min-height: 75vh;
+  background-color: #e9ebee;
+}
+
+.campus-left {
+  flex: 1;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent), url('/campus-life.jpg') center/cover no-repeat;
+  animation: panSlow 6s linear infinite;
+  clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+
+
+}
+
+@keyframes panSlow {
+  0% {
+    background-position: right center;
+  }
+  100% {
+    background-position: left center;
+  }
+}
+
+.campus-right {
+  height: 80vh;
+  flex: 0 0 53%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.campus-content {
+  margin-top: -6rem;
+  max-width: 650px;
+  padding: 1rem 6rem 0;
+  color: #292727;
+}
+
+.campus-tagline {
+  font-size: 2.7rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+  font-style: italic;
+}
+
+.campus-summary {
+  font-size: 15px;
+  line-height: 1.8;
+  font-family: 'Lato', sans-serif;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.15px;
+}
+
+.campus-cta {
+  background: transparent;
+  color:  #038332;
+  padding: 14px 28px;
+  border: 2px solid   #038332;
+  font-size: 12px;
+  font-weight: 800;
+  font-style: italic;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.campus-cta:hover {
+ background: #038332;
+  color: #e9ebee;
+}
+
+.campus-facts {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.campus-fact-block {
+  flex: 0 0 auto;
+  text-align: left;
+}
+
+.campus-fact-block h4 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #110101;
+  margin-bottom: 0.3rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+.campus-fact-block p {
+  font-size: 0.9rem;
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}

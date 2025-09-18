@@ -1,0 +1,50 @@
+
+.facts-section {
+  background: #0c0c0c;
+  color: white;
+  padding: 0 2rem;
+  padding-top: 0;
+  padding-bottom: 3.5rem;
+  font-family: 'Outfit', sans-serif;
+  text-align: center;
+}
+
+.facts-heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+.facts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.fact-card {
+  background: #1a1a1a;
+  padding: 2rem;
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+
+.fact-card:hover {
+  border: 2px solid rgba(243, 238, 238, 0.705);
+  
+}
+
+.fact-stat {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.fact-label {
+  font-size: 1rem;
+  color: #ccc;
+}
