@@ -6,7 +6,7 @@ function Footer() {
     <footer className="footer">
         <div className="footer-inner">
             <div className="footer-top">
-                <img src="/cefi-logo.png" alt="CEFI Logo" className="footer-logo" />
+                <img src={`${import.meta.env.BASE_URL}cefi-logo.png`} alt="Cefi Logo" className="footer-logo" />
                 <p className="footer-description">
                 Calayan Educational Foundation Inc. One of the best institution in Quezon Province.
                 </p>
