@@ -4,15 +4,10 @@ function Hero() {
   return (
     <section className="hero">
       {/* Video Background */}
-      <div className="hero-video-bg">
-        <iframe
-          src="https://www.youtube.com/embed/GCft0RILJns?autoplay=1&mute=1&loop=1&playlist=GCft0RILJns&controls=0&showinfo=0&modestbranding=1&rel=0"
-          title="Hero Background Video"
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-        ></iframe>
-      </div>
+      <video autoPlay muted loop className="hero-video-bg">
+        <source src={`${import.meta.env.BASE_URL}hero-video.mp4`} type="videoZmp4" />
+      </video>
+
 
 
       {/* Overlay */}
