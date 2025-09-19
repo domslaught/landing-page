@@ -13,7 +13,7 @@ function Header() {
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="logo">
-        <img src="./cefi-logo.png" alt="CEFI Logo" />
+        <img  src={`${process.env.PUBLIC_URL}/cefi-logo.png`} alt="CEFI Logo" />
         <div className="logo-text">
           <h3>Calayan Educational Foundation Inc.</h3>
           <h4>Lucena City, Quezon</h4>
