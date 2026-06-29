@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap');
+
+/* ════════════════════════════════════════════════
+   ADMISSIONS SECTION — SHARP VERTICAL TIMELINE
+   ════════════════════════════════════════════════ */
+.admissions-section {
+  background: #0c0c0c;
+  color: #fff;
+  padding: 6rem 2rem 5rem;
+  font-family: 'Outfit', sans-serif;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.admissions-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ── Section header ── */
+.admissions-header {
+  margin-bottom: 4rem;
+}
+
+.admissions-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #054914;
+  background: rgba(5, 73, 20, 0.15);
+  padding: 4px 10px;
+  border-left: 3px solid #054914;
+  margin-bottom: 1rem;
+}
+
+.admissions-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #fff;
+  margin: 0 0 1rem;
+  font-style: italic;
+}
+
+.admissions-rule {
+  width: 60px;
+  height: 3px;
+  background: #D4D10D;
+  margin-bottom: 1.2rem;
+}
+
+.admissions-subtitle {
+  font-size: 0.95rem;
+  color: #888;
+  margin: 0;
+  max-width: 500px;
+}
+
+/* ════════════════════════════════════════════════
+   TIMELINE LAYOUT
+   ════════════════════════════════════════════════ */
+.admissions-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+/* Each step row */
+.timeline-step {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  min-height: 100px;
+}
+
+/* ── Square step number chip ── */
+.step-chip {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background: #054914;
+  border-radius: 0;                    /* sharp — zero softness */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  align-self: flex-start;
+  margin-top: 0;
+  clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+}
+
+.step-chip span {
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.5px;
+  font-style: italic;
+}
+
+/* ── Vertical spine connector ── */
+.step-connector {
+  position: absolute;
+  left: 25px;               /* center of the 52px chip */
+  top: 52px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #054914, rgba(5,73,20,0.1));
+  z-index: 1;
+}
+
+/* ── Step content card ── */
+.step-card {
+  flex: 1;
+  margin-left: 1.5rem;
+  padding: 0 0 3rem 0;
+  border-left: 1px solid rgba(255,255,255,0.05);
+  padding-left: 1.5rem;
+  transition: border-left-color 0.18s ease-in-out;
+}
+
+.timeline-step:hover .step-card {
+  border-left-color: rgba(5,73,20,0.5);
+}
+
+.step-tag {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #D4D10D;
+  margin-bottom: 0.5rem;
+}
+
+.step-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.6rem;
+  letter-spacing: -0.3px;
+}
+
+.step-desc {
+  font-size: 0.875rem;
+  color: #777;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 600px;
+}
+
+/* ════════════════════════════════════════════════
+   CTA BAR
+   ════════════════════════════════════════════════ */
+.admissions-cta-bar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  flex-wrap: wrap;
+}
+
+.admissions-cta-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #054914;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border-radius: 0;
+  border: 2px solid #054914;
+  transition: all 0.18s ease-in-out;
+}
+
+.admissions-cta-btn:hover {
+  background: transparent;
+  color: #054914;
+}
+
+.admissions-cta-link {
+  color: #888;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.18s ease-in-out;
+  letter-spacing: 0.3px;
+}
+
+.admissions-cta-link:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .step-chip {
+    width: 40px;
+    height: 40px;
+  }
+
+  .step-connector {
+    left: 19px;
+    top: 40px;
+  }
+}

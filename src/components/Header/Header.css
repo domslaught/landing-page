@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap');
+
+/* ════════════════════════════════════════════════
+   BASE HEADER
+   ════════════════════════════════════════════════ */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.50), transparent);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1000;
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-sizing: border-box;
+}
+
+.header.scrolled {
+  background: linear-gradient(to right, rgb(5, 73, 20) 60%, rgb(8, 94, 27));
+  justify-content: center;
+  padding: 0.75rem 1.8rem;
+  gap: 1rem;
+}
+
+/* ════════════════════════════════════════════════
+   LOGO
+   ════════════════════════════════════════════════ */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header.scrolled .logo {
+  transform: translateX(0);
+  margin-right: 2rem;
+}
+
+.logo img {
+  height: 55px;
+  width: auto;
+  transition: height 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header.scrolled .logo img {
+  height: 40px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  transition: opacity 0.3s ease;
+}
+
+.header.scrolled .logo-text {
+  opacity: 0.9;
+}
+
+.logo h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap;
+  transition: font-size 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header.scrolled .logo h3 {
+  font-size: 1rem;
+}
+
+.logo h4 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+  margin-left: 3px;
+  white-space: nowrap;
+  transition: font-size 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header.scrolled .logo h4 {
+  font-size: 0.8rem;
+}
+
+/* ════════════════════════════════════════════════
+   NAV LINKS
+   ════════════════════════════════════════════════ */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header.scrolled .nav-links {
+  justify-content: flex-start;
+  flex-grow: 0;
+  gap: 4rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 17px;
+  font-weight: 500;
+  transition: font-size 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header.scrolled .nav-links a {
+  font-size: 15px;
+}
+
+/* Centered scrolled layout */
+.header.scrolled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header.scrolled .logo,
+.header.scrolled .nav-links {
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════════════════════════
+   NAV ITEM + DROPDOWN — SHARP SNAP-ACTION
+   ════════════════════════════════════════════════ */
+.nav-item {
+  position: relative;
+}
+
+.nav-item > a {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  position: relative;
+}
+
+.arrow {
+  font-size: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-item:hover .arrow {
+  transform: rotate(180deg);
+}
+
+/* Sharp dropdown — no radius, crisp border, snap-action transform */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 24px);
+  left: 0;
+  background: #fff;
+  color: #111;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 195px;
+  border: 1px solid rgba(5, 73, 20, 0.35);
+  border-top: 3px solid #054914;
+  border-radius: 0;                    /* sharp — zero softness */
+  box-shadow: 4px 4px 0px rgba(5, 73, 20, 0.15);
+  z-index: 999;
+  /* Snap-action reveal */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.18s ease-in-out, transform 0.18s ease-in-out;
+}
+
+.nav-item:hover .dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.dropdown a {
+  padding: 0.6rem 1.4rem;
+  color: #111;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-left: 3px solid transparent;
+  transition: all 0.15s ease-in-out;
+  letter-spacing: 0.2px;
+}
+
+.dropdown a:hover {
+  color: #054914;
+  font-weight: 700;
+  background: rgba(5, 73, 20, 0.05);
+  border-left-color: #054914;         /* sharp left-accent reveal on hover */
+}
+
+/* ════════════════════════════════════════════════
+   INQUIRE NOW CTA — SHARP, HIGH-CONTRAST
+   ════════════════════════════════════════════════ */
+.nav-links a.inquire-btn {
+  padding: 10px 24px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 0;                    /* sharp — zero softness */
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  background: transparent;
+  color: #fff;
+}
+
+.nav-links a.inquire-btn:hover {
+  background: #fff;
+  color: #054914;
+  border-color: #fff;
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Scrolled-state variant */
+.header.scrolled .nav-links a.inquire-btn {
+  border-color: rgba(255, 255, 255, 0.7);
+  padding: 8px 20px;
+}
+
+.header.scrolled .nav-links a.inquire-btn:hover {
+  background: #fff;
+  color: #054914;
+}

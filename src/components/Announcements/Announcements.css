@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap');
+
+/* ════════════════════════════════════════════════
+   ANNOUNCEMENTS SECTION — MINIMAL HIGH-CONTRAST
+   ════════════════════════════════════════════════ */
+.announcements-section {
+  background: #f0f2f5;
+  color: #111;
+  padding: 6rem 2rem;
+  font-family: 'Outfit', sans-serif;
+  border-top: 1px solid rgba(0,0,0,0.07);
+}
+
+.announcements-inner {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* ── Section header ── */
+.announcements-header {
+  margin-bottom: 3.5rem;
+}
+
+.announcements-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #054914;
+  background: rgba(5, 73, 20, 0.08);
+  padding: 4px 10px;
+  border-left: 3px solid #054914;
+  margin-bottom: 1rem;
+}
+
+.announcements-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #0a0a0a;
+  margin: 0 0 1rem;
+  font-style: italic;
+}
+
+.announcements-rule {
+  width: 60px;
+  height: 3px;
+  background: #D4D10D;
+}
+
+/* ── List layout ── */
+.announcements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid rgba(0,0,0,0.09);
+}
+
+/* ── Individual announcement item ── */
+.announcement-item {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  border-left: 4px solid transparent;
+  transition: border-left-color 0.18s ease-in-out, background 0.18s ease-in-out;
+  position: relative;
+}
+
+.announcement-item:last-child {
+  border-bottom: none;
+}
+
+.announcement-item:hover {
+  border-left-color: #054914;
+  background: #fafffe;
+}
+
+/* Date stamp */
+.announcement-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 1.5rem 1rem;
+  background: #0a0a0a;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.date-day {
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #D4D10D;
+  text-transform: uppercase;
+}
+
+.date-year {
+  font-size: 0.65rem;
+  color: #666;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+
+/* Spine divider */
+.announcement-spine {
+  width: 1px;
+  background: rgba(5,73,20,0.15);
+  margin: 1.2rem 0;
+  flex-shrink: 0;
+}
+
+/* Content */
+.announcement-content {
+  padding: 1.5rem 1.5rem 1.5rem 1.2rem;
+  flex: 1;
+}
+
+.announcement-category {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #054914;
+  margin-bottom: 0.5rem;
+}
+
+.announcement-headline {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin: 0 0 0.5rem;
+  line-height: 1.35;
+}
+
+.announcement-body {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Arrow CTA */
+.announcement-link {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  color: #054914;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.18s ease-in-out;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.announcement-item:hover .announcement-link {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .announcement-date {
+    min-width: 60px;
+    padding: 1rem 0.6rem;
+  }
+
+  .announcement-content {
+    padding: 1rem;
+  }
+
+  .announcement-link {
+    display: none;
+  }
+}

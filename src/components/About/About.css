@@ -1,0 +1,151 @@
+.about-section {
+  display: flex;
+  min-height: 100vh;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* ── LEFT: Sharp Typographic Statement Panel ── */
+.about-left {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  background: #fdfdfd;
+  position: relative;
+  z-index: 2;
+  border-right: 1px solid rgba(0,0,0,0.08); /* crisp separator */
+}
+
+.about-content {
+  max-width: 580px;
+  width: 100%;
+}
+
+.about-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #054914;
+  background: rgba(5, 73, 20, 0.08);
+  padding: 4px 10px;
+  border-left: 3px solid #054914;
+  margin-bottom: 1.5rem;
+}
+
+.about-tagline {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 900;
+  font-family: 'Outfit', sans-serif;
+  color: #111;
+  line-height: 0.95; /* aggressive stacking */
+  margin: 0 0 2rem;
+  letter-spacing: -2px;
+}
+
+.about-summary {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-family: 'Lato', sans-serif;
+  color: #444;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+}
+
+.about-cta {
+  background: transparent;
+  color: #054914;
+  padding: 14px 32px;
+  border: 2px solid #054914;
+  font-size: 0.85rem;
+  font-weight: 800;
+  font-style: italic; /* requested */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0; /* sharp */
+  margin-bottom: 4rem;
+}
+
+.about-cta:hover {
+  background: #054914;
+  color: #fff;
+}
+
+/* Facts row */
+.about-facts {
+  display: flex;
+  gap: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.about-fact-block h4 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #111;
+  margin: 0 0 0.2rem;
+  font-family: 'Outfit', sans-serif;
+  font-style: italic;
+  letter-spacing: -1px;
+}
+
+.about-fact-block p {
+  font-size: 0.8rem;
+  color: #666;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  max-width: 140px;
+  line-height: 1.4;
+}
+
+/* ── RIGHT: Stark Framed Visual ── */
+.about-right {
+  flex: 0 0 50%;
+  background: url('/about.jpg') center/cover no-repeat;
+  position: relative;
+}
+
+/* Stark interior frame overlay */
+.about-frame-accent {
+  position: absolute;
+  inset: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.about-frame-accent::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px;
+  width: 40px; height: 4px;
+  background: #054914;
+}
+.about-frame-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; right: -2px;
+  width: 40px; height: 4px;
+  background: #D4D10D;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-section {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .about-left, .about-right {
+    flex: auto;
+    width: 100%;
+  }
+  .about-right {
+    min-height: 500px;
+  }
+}
